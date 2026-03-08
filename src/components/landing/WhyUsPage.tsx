@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import whyUsImage from '../../assets/why-us-visual.png';
 import { Shield, Zap, TrendingUp, BarChart3, Globe } from 'lucide-react';
 
 interface WhyUsPageProps {
@@ -50,7 +51,7 @@ export const WhyUsPage: React.FC<WhyUsPageProps> = ({ onAction }) => {
           
           {/* Image Container */}
           <div className="absolute top-0 right-10 w-[85%] h-[85%] bg-white shadow-2xl overflow-hidden z-10 rounded-3xl border-8 border-white p-6 flex items-center justify-center">
-            <img src="/src/assets/why-us-visual.png" alt="Unified Platform" className="w-full h-auto object-contain" />
+            <img src={whyUsImage} alt="Unified Platform" className="w-full h-auto object-contain" />
           </div>
 
            {/* Floating Badge */}

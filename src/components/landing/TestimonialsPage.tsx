@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import testimonialsImage from '../../assets/testimonials-visual.png';
 import { Quote } from 'lucide-react';
 
 interface TestimonialsPageProps {
@@ -62,7 +63,7 @@ export const TestimonialsPage: React.FC<TestimonialsPageProps> = ({ onAction }) 
             
             {/* Main Visual */}
             <div className="relative w-[90%] h-[90%] bg-white shadow-2xl overflow-hidden z-10 rounded-[40px] border-8 border-white p-10 flex items-center justify-center">
-              <img src="/src/assets/testimonials-visual.png" alt="Happy Professionals" className="w-full h-auto object-contain" />
+              <img src={testimonialsImage} alt="Happy Professionals" className="w-full h-auto object-contain" />
             </div>
 
             {/* Quote Icon */}

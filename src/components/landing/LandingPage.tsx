@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import heroTeam from '../../assets/hero-team.png';
 
 import { AboutPage } from './AboutPage';
 import { WhyUsPage } from './WhyUsPage';
@@ -75,7 +76,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onStart, onGetStarted 
             className="relative h-[600px] w-full flex items-center justify-center p-8 bg-white/40 backdrop-blur-sm rounded-[40px] border border-white/20 shadow-2xl"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-[#F48C71]/10 to-[#9AB8D4]/10 rounded-[40px] z-0" />
-            <img src="/src/assets/hero-team.png" alt="Kortex Platform Illustration" className="relative z-10 w-full h-auto object-contain drop-shadow-2xl" />
+            <img src={heroTeam} alt="Kortex Platform Illustration" className="relative z-10 w-full h-auto object-contain drop-shadow-2xl" />
             
             {/* Floating Decorative Elements */}
             <div className="absolute top-10 right-10 w-20 h-20 bg-[#F48C71]/20 blur-3xl rounded-full" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import aboutUsImage from '../../assets/about-us-new.png';
 
 interface AboutPageProps {
   onAction: () => void;
@@ -50,7 +51,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onAction }) => {
           
           {/* Image Container with the new illustration */}
           <div className="absolute bottom-10 left-10 w-[90%] h-[90%] bg-white shadow-2xl overflow-hidden z-10 rounded-3xl border-8 border-white p-4 flex items-center justify-center">
-            <img src="/src/assets/about-us-new.png" alt="About Kortex" className="w-full h-auto object-contain" />
+            <img src={aboutUsImage} alt="About Kortex" className="w-full h-auto object-contain" />
           </div>
 
           {/* Floating Badge */}
