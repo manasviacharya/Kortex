@@ -5,7 +5,8 @@ export type Profession =
   | 'Writer' 
   | 'Startup' 
   | 'Consulting' 
-  | 'Media Production';
+  | 'Media Production'
+  | 'Debate/MUN';
 
 export type Role = 
   | 'Lead' 

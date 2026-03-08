@@ -12,6 +12,9 @@ interface MainLayoutProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
   className?: string;
+  userName?: string;
+  orgName?: string;
+  onLogout?: () => void;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ 
@@ -20,8 +23,13 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   currentRole, 
   activeTab,
   setActiveTab,
-  className 
+  className,
+  userName,
+  orgName,
+  onLogout
 }) => {
+  const [isAIPanelOpen, setIsAIPanelOpen] = React.useState(true);
+
   return (
     <div className="flex h-screen bg-background-main overflow-hidden">
       <Sidebar 
@@ -29,17 +37,26 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
         currentRole={currentRole} 
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        userName={userName}
+        onLogout={onLogout}
       />
       <div className="flex-1 flex flex-col min-w-0">
         <TopBar 
           onNotificationClick={() => setActiveTab('notifications')}
           onProfileClick={() => setActiveTab('settings')}
+          userName={userName}
+          orgName={orgName}
         />
         <main className={cn("flex-1 overflow-y-auto p-8", className)}>
           {children}
         </main>
       </div>
-      <AIPanel currentProfession={currentProfession} currentRole={currentRole} />
+      <AIPanel 
+        currentProfession={currentProfession} 
+        currentRole={currentRole} 
+        isOpen={isAIPanelOpen}
+        onToggle={() => setIsAIPanelOpen(!isAIPanelOpen)}
+      />
     </div>
   );
 };

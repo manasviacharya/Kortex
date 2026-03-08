@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #4F46E5;
-  --color-secondary: #14B8A6;
-  --color-ai: #8B5CF6;
-  --color-background-main: #F8FAFC;
-  --color-background-alt: #F1F5F9;
+  --color-primary: #F48C71;
+  --color-secondary: #112A46;
+  --color-ai: #9AB8D4;
+  --color-background-main: #FFFFFF;
+  --color-background-alt: #F8F9FA;
   --color-panel: #FFFFFF;
-  --color-border-main: #E2E8F0;
+  --color-border-main: #EAECEF;
   --color-text-primary: #0F172A;
   --color-text-secondary: #475569;
   --color-text-muted: #94A3B8;
@@ -20,8 +20,8 @@
 
   --font-sans: "Inter", "SF Pro", "system-ui", "sans-serif";
 
-  --background-image-ai-gradient: linear-gradient(to right, #4F46E5, #8B5CF6);
-  --background-image-intelligence-gradient: linear-gradient(to right, #14B8A6, #4F46E5);
+  --background-image-ai-gradient: linear-gradient(to right, #F48C71, #F48C71);
+  --background-image-intelligence-gradient: linear-gradient(to right, #9AB8D4, #9AB8D4);
 }
 
 @layer base {
@@ -49,14 +49,13 @@
     background-color: var(--color-panel);
     border: 1px solid var(--color-border-main);
     border-radius: var(--radius-2xl);
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    transition-property: box-shadow;
+    transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 200ms;
   }
 
   .card:hover {
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-color: rgba(17, 42, 70, 0.1);
   }
   
   .btn-primary {
@@ -104,9 +103,7 @@
   }
   
   .ai-panel {
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    background-color: var(--color-background-alt);
+    border-left: 1px solid var(--color-border-main);
   }
 }

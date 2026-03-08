@@ -15,15 +15,15 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToSignup, onG
     <div className="min-h-screen bg-background-alt flex flex-col items-center justify-center p-8 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-ai/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
-      
-      <button 
+
+      <button
         onClick={onGoBack}
         className="absolute top-8 left-8 text-text-muted hover:text-primary transition-colors text-sm font-bold flex items-center gap-2 group"
       >
         <span className="group-hover:-translate-x-1 transition-transform">←</span> Back to Home
       </button>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-md w-full"
@@ -41,23 +41,23 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToSignup, onG
           <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); onLogin(); }}>
             <div className="space-y-2">
               <label className="text-[10px] font-bold text-text-muted uppercase tracking-widest px-1">Email Address</label>
-              <input 
-                type="email" 
+              <input
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="john@example.com"
+                placeholder="Enter registered email"
                 className="w-full bg-background-alt border border-border-main rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                 required
               />
             </div>
-            
+
             <div className="space-y-2">
               <div className="flex justify-between items-center px-1">
                 <label className="text-[10px] font-bold text-text-muted uppercase tracking-widest">Password</label>
                 <button type="button" className="text-[10px] font-bold text-primary hover:underline uppercase tracking-widest">Forgot?</button>
               </div>
-              <input 
-                type="password" 
+              <input
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
@@ -66,7 +66,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToSignup, onG
               />
             </div>
 
-            <button 
+            <button
               type="submit"
               className="btn-primary w-full py-4 text-sm font-bold shadow-lg"
             >
@@ -76,7 +76,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToSignup, onG
 
           <div className="mt-8 pt-8 border-t border-border-main text-center">
             <p className="text-sm text-text-secondary">
-              Don't have a workspace? <button onClick={onGoToSignup} className="text-primary font-bold hover:underline">Start Here</button>
+              Don't have a workspace? <button onClick={onGoToSignup} className="text-primary font-bold hover:underline">Sign Up</button>
             </p>
           </div>
         </div>

@@ -6,12 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#4F46E5",
-        secondary: "#14B8A6",
-        ai: "#8B5CF6",
-        background: "#F8FAFC",
+        primary: "#F48C71",
+        secondary: "#112A46",
+        ai: "#9AB8D4",
+        background: "#FFFFFF",
         panel: "#FFFFFF",
-        border: "#E2E8F0",
+        border: "#EAECEF",
         text: {
           primary: "#0F172A",
           secondary: "#475569",
@@ -31,8 +31,8 @@ export default {
         sans: ['Inter', 'SF Pro', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
-        'ai-gradient': 'linear-gradient(to right, #4F46E5, #8B5CF6)',
-        'intelligence-gradient': 'linear-gradient(to right, #14B8A6, #4F46E5)',
+        'ai-gradient': 'linear-gradient(to right, #F48C71, #F48C71)',
+        'intelligence-gradient': 'linear-gradient(to right, #9AB8D4, #9AB8D4)',
       }
     },
   },
