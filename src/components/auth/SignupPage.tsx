@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Logo } from '../common/Logo';
 import { LegalModal, PrivacyContent, TermsContent } from '../common/LegalModal';
 
 interface SignupPageProps {
@@ -30,13 +31,13 @@ export const SignupPage: React.FC<SignupPageProps> = ({ onSignup, onGoToLogin, o
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         className="max-w-md w-full"
       >
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 bg-ai-gradient rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">K</div>
-            <span className="text-3xl font-bold text-text-primary tracking-tight">Kortex</span>
+            <Logo size={40} className="drop-shadow-lg" />
+            <span className="text-3xl font-bold text-status-warning tracking-tight">Kortex</span>
           </div>
           <h1 className="text-3xl font-bold text-text-primary mb-2">Create Workspace</h1>
           <p className="text-text-secondary">Join thousands of intelligent teams.</p>

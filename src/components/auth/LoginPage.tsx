@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+import { Logo } from '../common/Logo';
+
 interface LoginPageProps {
   onLogin: () => void;
   onGoToSignup: () => void;
@@ -30,8 +32,8 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onGoToSignup, onG
       >
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 bg-ai-gradient rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg">K</div>
-            <span className="text-3xl font-bold text-text-primary tracking-tight">Kortex</span>
+            <Logo size={40} className="drop-shadow-lg" />
+            <span className="text-3xl font-bold text-status-warning tracking-tight">Kortex</span>
           </div>
           <h1 className="text-3xl font-bold text-text-primary mb-2">Welcome Back</h1>
           <p className="text-text-secondary">Log in to your intelligent workspace.</p>
